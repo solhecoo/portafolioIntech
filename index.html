@@ -1,20 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="es" class="dark scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dabox Hub — Work Less, Achieve More | AI Automation Platform</title>
-  <meta name="description" content="Dabox connects 3,247+ apps and automates repetitive tasks using AI. Describe what you need in plain language — Dabox executes it instantly.">
-  <meta name="keywords" content="AI automation, task automation, app integration, productivity, Dabox">
-  <meta property="og:title" content="Dabox Hub — AI-Powered Automation Platform">
-  <meta property="og:description" content="Automate the repetitive with AI and save hours every week. 3,247+ app integrations.">
+  <title>Intech — Desarrollo de Software & Soluciones Digitales</title>
+  <meta name="description" content="Transformamos ideas en productos digitales. Desarrollo de software, fintech, IA, blockchain y más. +27 proyectos entregados.">
+  <meta name="keywords" content="desarrollo software, fintech, inteligencia artificial, blockchain, diseño UX, Colombia">
+  <meta property="og:title" content="Intech — Soluciones Digitales a Medida">
+  <meta property="og:description" content="Desarrollo de software, fintech, IA y blockchain. +27 proyectos entregados desde 2024.">
   <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://daboxhub.com/en">
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.lordicon.com/lordicon.js"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -22,6 +18,14 @@
   <script>
     tailwind.config = {
       darkMode: 'class',
+      safelist: [
+        'text-brand-electric','bg-brand-electric/10','text-purple-400','bg-purple-400/10',
+        'text-brand-accent','bg-brand-accent/10','text-violet-400','bg-violet-400/10',
+        'text-orange-400','bg-orange-400/10','text-pink-400','bg-pink-400/10',
+        'from-brand-electric','to-cyan-400','from-brand-success','to-emerald-400',
+        'from-brand-accent','to-amber-400','from-rose-500','to-pink-400',
+        'from-violet-500','to-purple-400','from-orange-500','from-pink-500','to-rose-400',
+      ],
       theme: {
         extend: {
           fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
@@ -38,7 +42,6 @@
             }
           },
           animation: {
-            'scroll': 'scroll 40s linear infinite',
             'float': 'float 6s ease-in-out infinite',
             'float-delay': 'float 6s ease-in-out 2s infinite',
             'float-slow': 'float 8s ease-in-out 1s infinite',
@@ -47,9 +50,9 @@
             'fade-up-delay-1': 'fadeUp 0.6s ease-out 0.1s forwards',
             'fade-up-delay-2': 'fadeUp 0.6s ease-out 0.2s forwards',
             'fade-up-delay-3': 'fadeUp 0.6s ease-out 0.3s forwards',
+            'counter': 'counter 2s ease-out forwards',
           },
           keyframes: {
-            scroll: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } },
             float: { '0%, 100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-20px)' } },
             pulseGlow: { '0%, 100%': { opacity: '0.4' }, '50%': { opacity: '1' } },
             fadeUp: { '0%': { opacity: '0', transform: 'translateY(30px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
@@ -64,15 +67,10 @@
     html { font-family: 'Inter', system-ui, sans-serif; }
     body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
-    /* Scrollbar */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 3px; }
 
-    /* Theme transitions */
-    .theme-transition { transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
-
-    /* Gradient text */
     .gradient-text {
       background: linear-gradient(135deg, #00D4FF 0%, #f59e0b 100%);
       -webkit-background-clip: text;
@@ -80,29 +78,17 @@
       background-clip: text;
     }
 
-    /* Hero background */
     .hero-gradient {
       background: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(0, 212, 255, 0.15) 0%, transparent 70%),
                   radial-gradient(ellipse 60% 40% at 80% 50%, rgba(245, 158, 11, 0.08) 0%, transparent 60%);
     }
-    .light .hero-gradient {
-      background: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(0, 212, 255, 0.1) 0%, transparent 70%),
-                  radial-gradient(ellipse 60% 40% at 80% 50%, rgba(245, 158, 11, 0.05) 0%, transparent 60%);
-    }
 
-    /* Glass card */
     .glass-card {
       background: rgba(255, 255, 255, 0.03);
       backdrop-filter: blur(12px);
       border: 1px solid rgba(255, 255, 255, 0.06);
     }
-    .light .glass-card {
-      background: rgba(255, 255, 255, 0.8);
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-    }
 
-    /* Feature card hover */
     .feature-card {
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -111,11 +97,7 @@
       border-color: rgba(0, 212, 255, 0.3);
       box-shadow: 0 20px 60px rgba(0, 212, 255, 0.08);
     }
-    .light .feature-card:hover {
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-    }
 
-    /* Scroll reveal */
     .reveal {
       opacity: 0;
       transform: translateY(40px);
@@ -126,46 +108,15 @@
       transform: translateY(0);
     }
 
-    /* Carousel */
-    .carousel-track { display: flex; width: max-content; }
-
-    /* Pricing card glow */
-    .pricing-popular {
-      position: relative;
-      border: 2px solid rgba(0, 212, 255, 0.5);
-    }
-    .pricing-popular::before {
-      content: '';
-      position: absolute;
-      inset: -2px;
-      border-radius: inherit;
-      background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(245, 158, 11, 0.2));
-      z-index: -1;
-      filter: blur(20px);
-    }
-
-    /* FAQ */
-    .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-    .faq-content.open { max-height: 300px; }
-    .faq-icon { transition: transform 0.3s ease; }
-    .faq-icon.open { transform: rotate(45deg); }
-
-    /* Navbar solid */
     .navbar-solid {
       background: rgba(9, 9, 11, 0.85) !important;
       backdrop-filter: blur(20px) !important;
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
-    .light .navbar-solid {
-      background: rgba(255, 255, 255, 0.9) !important;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    }
 
-    /* Mobile menu */
     .mobile-menu { transform: translateX(100%); transition: transform 0.3s ease; }
     .mobile-menu.open { transform: translateX(0); }
 
-    /* Button shine */
     .btn-shine {
       position: relative;
       overflow: hidden;
@@ -185,1552 +136,415 @@
       transform: translateX(100%);
     }
 
-    /* Step connector line */
-    .step-line {
-      position: absolute;
-      top: 2rem;
-      left: calc(50% + 2rem);
-      width: calc(100% - 4rem);
-      height: 2px;
-      background: linear-gradient(90deg, rgba(0, 212, 255, 0.5), rgba(245, 158, 11, 0.5));
-    }
-
-    /* Portfolio filters */
     .filter-btn { transition: all 0.3s ease; }
     .filter-btn.active {
       background: linear-gradient(135deg, #00D4FF, #06b6d4);
       color: #0A2540;
       border-color: transparent;
     }
-    .portfolio-card {
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      cursor: pointer;
-    }
-    .portfolio-card:hover { transform: translateY(-6px); }
-    .portfolio-card.no-link { cursor: default; }
-    .portfolio-card.no-link:hover { transform: none; }
-    .portfolio-card.hidden-card {
-      opacity: 0;
-      transform: scale(0.9);
-      position: absolute;
-      pointer-events: none;
-    }
+
     .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.25rem;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.5rem;
     }
     @media (max-width: 640px) {
       .portfolio-grid { grid-template-columns: 1fr; }
     }
-    .status-badge { font-size: 0.65rem; padding: 2px 8px; border-radius: 9999px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
-    .status-terminado { background: rgba(16, 185, 129, 0.15); color: #10B981; }
-    .status-en-proceso { background: rgba(0, 212, 255, 0.15); color: #00D4FF; }
-    .status-en-negociacion { background: rgba(245, 158, 11, 0.15); color: #f59e0b; }
-    .status-en-cotizacion { background: rgba(168, 85, 247, 0.15); color: #a855f7; }
 
-    /* Light mode overrides */
-    .light { color-scheme: light; }
+    .portfolio-card {
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 1.25rem;
+      position: relative;
+    }
+    .portfolio-card:hover {
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: 0 25px 60px rgba(0, 212, 255, 0.12), 0 0 0 1px rgba(0, 212, 255, 0.2);
+    }
+    .portfolio-card.no-link { cursor: default; }
+    .portfolio-card.no-link:hover { transform: none; box-shadow: none; }
+
+    .portfolio-card .card-img {
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(135deg, rgba(0,212,255,0.05), rgba(245,158,11,0.05));
+    }
+    .portfolio-card .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.4s ease;
+      filter: brightness(0.85);
+    }
+    .portfolio-card:hover .card-img img {
+      transform: scale(1.08);
+      filter: brightness(1);
+    }
+
+    .portfolio-card .card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(9,9,11,0.95) 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.25rem;
+    }
+    .portfolio-card:hover .card-overlay {
+      opacity: 1;
+    }
+    .portfolio-card .card-overlay .overlay-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #00D4FF, #06b6d4);
+      color: #0A2540;
+      font-size: 0.8rem;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    .portfolio-card:hover .card-overlay .overlay-btn {
+      transform: translateY(0);
+      opacity: 1;
+      transition-delay: 0.1s;
+    }
+    .portfolio-card .card-overlay .overlay-btn:hover {
+      box-shadow: 0 4px 20px rgba(0, 212, 255, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .portfolio-card .card-img .placeholder-img {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      color: rgba(255,255,255,0.06);
+      background: linear-gradient(135deg, rgba(0,212,255,0.03) 0%, rgba(245,158,11,0.03) 100%);
+    }
+
+    .portfolio-card .card-img .img-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(0,212,255,0.03), rgba(245,158,11,0.03));
+    }
+    .portfolio-card .card-img .img-loading::after {
+      content: '';
+      width: 24px;
+      height: 24px;
+      border: 2px solid rgba(0,212,255,0.2);
+      border-top-color: #00D4FF;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .card-tech-stack {
+      display: flex;
+      gap: 0.35rem;
+      flex-wrap: wrap;
+    }
+    .card-tech-stack span {
+      font-size: 0.6rem;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.05);
+      color: #a1a1aa;
+      font-weight: 500;
+    }
+
   </style>
 </head>
 
-<body class="dark bg-brand-surface text-white theme-transition">
+<body class="dark bg-brand-surface text-white">
 
   <!-- ===== NAVBAR ===== -->
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 lg:h-20">
-        <!-- Logo -->
         <a href="#" class="flex items-center gap-2 group">
-          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-electric to-brand-accent flex items-center justify-center">
-            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #2d8a4e 0%, #34c7a0 40%, #7dd3a8 70%, #c4b84e 100%);">
+            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
           </div>
-          <span class="text-xl font-bold tracking-tight">Dabox</span>
+          <span class="text-xl font-bold tracking-tight">Intech</span>
         </a>
 
-        <!-- Desktop Menu -->
         <div class="hidden lg:flex items-center gap-8">
-          <a href="#home" class="text-sm text-brand-muted hover:text-white dark:hover:text-white transition-colors">Home</a>
-          <a href="#services" class="text-sm text-brand-muted hover:text-white dark:hover:text-white transition-colors">Services</a>
-          <a href="#features" class="text-sm text-brand-muted hover:text-white dark:hover:text-white transition-colors">Features</a>
-          <a href="#integrations" class="text-sm text-brand-muted hover:text-white dark:hover:text-white transition-colors">Integrations</a>
-          <a href="#portfolio" class="text-sm text-brand-muted hover:text-white dark:hover:text-white transition-colors">Portfolio</a>
-          <a href="#pricing" class="text-sm text-brand-muted hover:text-white dark:hover:text-white transition-colors">Pricing</a>
-          <a href="#faq" class="text-sm text-brand-muted hover:text-white dark:hover:text-white transition-colors">FAQ</a>
-          <a href="#contact" class="text-sm text-brand-muted hover:text-white dark:hover:text-white transition-colors">Contact</a>
+          <a href="#inicio" class="text-sm text-brand-muted hover:text-white transition-colors">Inicio</a>
+          <a href="#servicios" class="text-sm text-brand-muted hover:text-white transition-colors">Servicios</a>
+          <a href="#portafolio" class="text-sm text-brand-muted hover:text-white transition-colors">Portafolio</a>
+          <a href="#proceso" class="text-sm text-brand-muted hover:text-white transition-colors">Proceso</a>
+          <a href="#contacto" class="text-sm text-brand-muted hover:text-white transition-colors">Contacto</a>
         </div>
 
-        <!-- Right Actions -->
         <div class="hidden lg:flex items-center gap-3">
-          <!-- Theme toggle -->
-          <button id="themeToggle" class="p-2 rounded-lg text-brand-muted hover:text-white transition-colors" aria-label="Toggle theme">
-            <svg id="moonIcon" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-            <svg id="sunIcon" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-          </button>
-          <a href="#" class="text-sm text-brand-muted hover:text-white transition-colors px-3 py-2">Login</a>
-          <a href="#" class="btn-shine text-sm font-semibold px-5 py-2.5 rounded-full bg-gradient-to-r from-brand-electric to-cyan-400 text-brand-deep hover:shadow-lg hover:shadow-brand-electric/20 transition-all">Try free</a>
+          <a href="#contacto" class="btn-shine text-sm font-semibold px-5 py-2.5 rounded-full bg-gradient-to-r from-brand-electric to-cyan-400 text-brand-deep hover:shadow-lg hover:shadow-brand-electric/20 transition-all">Hablemos</a>
         </div>
 
-        <!-- Mobile toggle -->
         <button id="mobileMenuBtn" class="lg:hidden p-2 text-brand-muted" aria-label="Menu">
           <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Menu -->
     <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-72 bg-brand-surface/95 backdrop-blur-xl z-50 p-6 lg:hidden">
-      <button id="mobileMenuClose" class="absolute top-4 right-4 p-2 text-brand-muted" aria-label="Close menu">
+      <button id="mobileMenuClose" class="absolute top-4 right-4 p-2 text-brand-muted" aria-label="Cerrar">
         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
       <div class="flex flex-col gap-4 mt-12">
-        <a href="#home" class="text-lg text-brand-muted hover:text-white transition-colors mobile-link">Home</a>
-        <a href="#services" class="text-lg text-brand-muted hover:text-white transition-colors mobile-link">Services</a>
-        <a href="#features" class="text-lg text-brand-muted hover:text-white transition-colors mobile-link">Features</a>
-        <a href="#integrations" class="text-lg text-brand-muted hover:text-white transition-colors mobile-link">Integrations</a>
-        <a href="#portfolio" class="text-lg text-brand-muted hover:text-white transition-colors mobile-link">Portfolio</a>
-        <a href="#pricing" class="text-lg text-brand-muted hover:text-white transition-colors mobile-link">Pricing</a>
-        <a href="#faq" class="text-lg text-brand-muted hover:text-white transition-colors mobile-link">FAQ</a>
-        <a href="#contact" class="text-lg text-brand-muted hover:text-white transition-colors mobile-link">Contact</a>
+        <a href="#inicio" class="text-lg text-brand-muted hover:text-white transition-colors mobile-link">Inicio</a>
+        <a href="#servicios" class="text-lg text-brand-muted hover:text-white transition-colors mobile-link">Servicios</a>
+        <a href="#portafolio" class="text-lg text-brand-muted hover:text-white transition-colors mobile-link">Portafolio</a>
+        <a href="#proceso" class="text-lg text-brand-muted hover:text-white transition-colors mobile-link">Proceso</a>
+        <a href="#contacto" class="text-lg text-brand-muted hover:text-white transition-colors mobile-link">Contacto</a>
         <hr class="border-brand-border my-2">
-        <a href="#" class="text-lg text-brand-muted hover:text-white transition-colors">Login</a>
-        <a href="#" class="text-center font-semibold px-5 py-3 rounded-full bg-gradient-to-r from-brand-electric to-cyan-400 text-brand-deep">Try free</a>
-        <button id="mobileThemeToggle" class="flex items-center gap-2 text-brand-muted hover:text-white transition-colors mt-2">
-          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-          <span class="text-sm">Toggle theme</span>
-        </button>
+        <a href="#contacto" class="text-center font-semibold px-5 py-3 rounded-full bg-gradient-to-r from-brand-electric to-cyan-400 text-brand-deep">Hablemos</a>
       </div>
     </div>
   </nav>
 
   <!-- ===== HERO ===== -->
-  <section id="home" class="relative min-h-screen flex items-center hero-gradient overflow-hidden pt-20">
-    <!-- Floating app icons -->
+  <section id="inicio" class="relative min-h-screen flex items-center hero-gradient overflow-hidden pt-20">
     <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-      <div class="absolute top-[18%] left-[8%] w-12 h-12 rounded-xl bg-white/5 backdrop-blur flex items-center justify-center animate-float border border-white/10">
-        <svg class="w-6 h-6 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
-      </div>
-      <div class="absolute top-[25%] right-[10%] w-14 h-14 rounded-xl bg-white/5 backdrop-blur flex items-center justify-center animate-float-delay border border-white/10">
-        <svg class="w-7 h-7 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"/></svg>
-      </div>
-      <div class="absolute bottom-[30%] left-[15%] w-11 h-11 rounded-xl bg-white/5 backdrop-blur flex items-center justify-center animate-float-slow border border-white/10">
-        <svg class="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
-      </div>
-      <div class="absolute top-[40%] right-[20%] w-10 h-10 rounded-xl bg-white/5 backdrop-blur flex items-center justify-center animate-float border border-white/10">
-        <svg class="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
-      </div>
-      <div class="absolute bottom-[25%] right-[8%] w-12 h-12 rounded-xl bg-white/5 backdrop-blur flex items-center justify-center animate-float-delay border border-white/10">
-        <svg class="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"/></svg>
-      </div>
-      <div class="absolute top-[60%] left-[5%] w-10 h-10 rounded-xl bg-white/5 backdrop-blur flex items-center justify-center animate-float-slow border border-white/10">
-        <svg class="w-5 h-5 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
-      </div>
-      <!-- Decorative glow orbs -->
       <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-brand-electric/5 blur-3xl animate-pulse-glow"></div>
       <div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-brand-accent/5 blur-3xl animate-pulse-glow"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <!-- Badge -->
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-electric/20 bg-brand-electric/5 mb-8 opacity-0 animate-fade-up">
         <span class="w-2 h-2 rounded-full bg-brand-success animate-pulse"></span>
-        <span class="text-sm text-brand-electric font-medium">Powered by AI — 3,247+ apps connected</span>
+        <span class="text-sm text-brand-electric font-medium">+27 proyectos entregados &mdash; Fintech, IA, Blockchain y mas</span>
       </div>
 
-      <!-- Headline -->
       <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.95] mb-6 opacity-0 animate-fade-up-delay-1">
-        Work less,<br>
-        <span class="gradient-text">achieve more</span>
+        Transformamos ideas en<br>
+        <span class="gradient-text">productos digitales</span>
       </h1>
 
-      <!-- Subheadline -->
       <p class="text-lg sm:text-xl text-brand-muted max-w-2xl mx-auto mb-10 leading-relaxed opacity-0 animate-fade-up-delay-2">
-        Automate the repetitive with AI and save hours every week.<br class="hidden sm:block">
-        Describe your tasks in plain language — Dabox executes them instantly.
+        Somos un equipo de desarrollo especializado en software a medida,<br class="hidden sm:block">
+        fintech, inteligencia artificial y soluciones blockchain.
       </p>
 
-      <!-- CTAs -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 opacity-0 animate-fade-up-delay-3">
-        <a href="#" class="btn-shine w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-brand-electric to-cyan-400 text-brand-deep font-bold text-lg hover:shadow-2xl hover:shadow-brand-electric/25 transition-all hover:scale-105">
-          Try free
+        <a href="#portafolio" class="btn-shine w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-brand-electric to-cyan-400 text-brand-deep font-bold text-lg hover:shadow-2xl hover:shadow-brand-electric/25 transition-all hover:scale-105">
+          Ver portafolio
         </a>
-        <a href="#" class="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/10 hover:border-white/20 text-white font-semibold text-lg transition-all hover:bg-white/5 group">
-          <svg class="w-5 h-5 text-brand-electric group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          Watch 1-min demo
+        <a href="#servicios" class="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/10 hover:border-white/20 text-white font-semibold text-lg transition-all hover:bg-white/5">
+          Nuestros servicios
         </a>
       </div>
 
-      <!-- Trust bar -->
       <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-brand-muted text-sm">
         <div class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-brand-electric" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838l-3.098 1.327L10 11.236l6.394-2.736a1 1 0 000-1.84l-7-3z"/><path d="M3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0z"/></svg>
-          <span><strong class="text-white">3,247</strong> apps</span>
+          <svg class="w-4 h-4 text-brand-electric" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <span><strong class="text-white">27+</strong> proyectos</span>
         </div>
         <div class="flex items-center gap-2">
           <svg class="w-4 h-4 text-brand-success" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-          <span><strong class="text-white">99.7%</strong> uptime</span>
+          <span><strong class="text-white">15+</strong> entregados</span>
         </div>
         <div class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/></svg>
-          <span><strong class="text-white">+2,100</strong> users</span>
+          <svg class="w-4 h-4 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <span><strong class="text-white">6</strong> industrias</span>
         </div>
         <div class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-brand-electric" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/></svg>
-          <span><strong class="text-white">1M+</strong> messages</span>
+          <svg class="w-4 h-4 text-brand-electric" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <span><strong class="text-white">2024-2026</strong> activos</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== ABOUT / WHAT IS DABOX ===== -->
-  <section id="about" class="py-24 lg:py-32 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <div class="reveal">
-          <span class="text-brand-electric text-sm font-semibold uppercase tracking-wider">What is Dabox?</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6 leading-tight">
-            Your AI assistant that<br><span class="gradient-text">learns, remembers & executes</span>
-          </h2>
-          <p class="text-brand-muted text-lg leading-relaxed mb-8">
-            Dabox is an AI-powered platform that connects all your apps into a single intelligent chat. Simply describe what you need in plain language — and Dabox handles the rest. No code, no complex workflows. Just results.
-          </p>
-          <div class="flex flex-col gap-4">
-            <div class="flex items-start gap-3">
-              <div class="w-6 h-6 rounded-full bg-brand-success/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-3.5 h-3.5 text-brand-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <p class="text-brand-muted">AI learns your preferences and improves over time</p>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-6 h-6 rounded-full bg-brand-success/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-3.5 h-3.5 text-brand-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <p class="text-brand-muted">Persistent memory across all your conversations</p>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-6 h-6 rounded-full bg-brand-success/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-3.5 h-3.5 text-brand-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <p class="text-brand-muted">Enterprise-grade security with fully isolated data</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Animated demo placeholder -->
-        <div class="reveal">
-          <div class="relative rounded-2xl overflow-hidden glass-card p-1">
-            <div class="bg-brand-surface rounded-xl p-6 sm:p-8">
-              <!-- Chat simulation -->
-              <div class="space-y-4">
-                <div class="flex items-start gap-3">
-                  <div class="w-8 h-8 rounded-full bg-gradient-to-br from-brand-electric to-cyan-400 flex items-center justify-center flex-shrink-0">
-                    <span class="text-xs font-bold text-brand-deep">You</span>
-                  </div>
-                  <div class="bg-white/5 rounded-2xl rounded-tl-md px-4 py-3 max-w-[85%]">
-                    <p class="text-sm">Summarize my emails from today and create a task in Notion for each important one</p>
-                  </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <div class="w-8 h-8 rounded-full bg-gradient-to-br from-brand-accent to-amber-400 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-4 h-4 text-brand-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                  </div>
-                  <div class="bg-brand-electric/5 border border-brand-electric/10 rounded-2xl rounded-tl-md px-4 py-3 max-w-[85%]">
-                    <p class="text-sm text-brand-muted mb-2">Done! Found <strong class="text-white">8 emails</strong> today. Created <strong class="text-white">3 tasks</strong> in Notion:</p>
-                    <div class="space-y-1.5 text-xs text-brand-muted">
-                      <div class="flex items-center gap-2">
-                        <svg class="w-3 h-3 text-brand-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
-                        <span>Review Q1 report — from Sarah</span>
-                      </div>
-                      <div class="flex items-center gap-2">
-                        <svg class="w-3 h-3 text-brand-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
-                        <span>Schedule meeting with client — from Alex</span>
-                      </div>
-                      <div class="flex items-center gap-2">
-                        <svg class="w-3 h-3 text-brand-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
-                        <span>Approve design mockups — from Design team</span>
-                      </div>
-                    </div>
-                    <div class="flex items-center gap-2 mt-3 text-xs text-brand-electric">
-                      <span class="flex items-center gap-1"><svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg> Gmail</span>
-                      <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-                      <span class="flex items-center gap-1"><svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg> Notion</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Typing indicator -->
-              <div class="flex items-center gap-1.5 mt-4 ml-11">
-                <div class="w-1.5 h-1.5 rounded-full bg-brand-muted animate-bounce" style="animation-delay: 0s"></div>
-                <div class="w-1.5 h-1.5 rounded-full bg-brand-muted animate-bounce" style="animation-delay: 0.15s"></div>
-                <div class="w-1.5 h-1.5 rounded-full bg-brand-muted animate-bounce" style="animation-delay: 0.3s"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SERVICES / CORE FEATURES ===== -->
-  <section id="services" class="py-24 lg:py-32 relative">
+  <!-- ===== SERVICIOS ===== -->
+  <section id="servicios" class="py-24 lg:py-32 relative">
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-electric/[0.02] to-transparent pointer-events-none"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="text-center mb-16 reveal">
-        <span class="text-brand-electric text-sm font-semibold uppercase tracking-wider">Core Services</span>
+        <span class="text-brand-electric text-sm font-semibold uppercase tracking-wider">Servicios</span>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
-          Describe it. <span class="gradient-text">Dabox executes it.</span>
+          Soluciones digitales <span class="gradient-text">a tu medida</span>
         </h2>
-        <p class="text-brand-muted text-lg max-w-2xl mx-auto">Everything you need to automate your workflow, powered by AI that understands context and learns from every interaction.</p>
+        <p class="text-brand-muted text-lg max-w-2xl mx-auto">Desde la idea hasta produccion. Cubrimos cada etapa del desarrollo con tecnologia de punta y enfoque en resultados.</p>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Card 1 -->
+        <!-- Fintech -->
         <div class="feature-card glass-card rounded-2xl p-8 reveal group">
           <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-electric/20 to-brand-electric/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <svg class="w-7 h-7 text-brand-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/></svg>
+            <svg class="w-7 h-7 text-brand-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"/></svg>
           </div>
-          <h3 class="text-xl font-bold mb-3">AI Task Automation</h3>
-          <p class="text-brand-muted leading-relaxed">Describe any task in natural language and let AI execute it across your connected apps. No coding, no complex workflows.</p>
+          <h3 class="text-xl font-bold mb-3">Fintech</h3>
+          <p class="text-brand-muted leading-relaxed">Plataformas de pagos, wallets digitales, lending, KYC, trading y ecosistemas financieros completos.</p>
         </div>
 
-        <!-- Card 2 -->
-        <div class="feature-card glass-card rounded-2xl p-8 reveal group">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-accent/20 to-brand-accent/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <svg class="w-7 h-7 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
-          </div>
-          <h3 class="text-xl font-bold mb-3">Personalized AI Agent</h3>
-          <p class="text-brand-muted leading-relaxed">Your AI learns your preferences, remembers context across sessions, and gets smarter with every interaction.</p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="feature-card glass-card rounded-2xl p-8 reveal group">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-success/20 to-brand-success/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <svg class="w-7 h-7 text-brand-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
-          </div>
-          <h3 class="text-xl font-bold mb-3">Unified Chat Control</h3>
-          <p class="text-brand-muted leading-relaxed">One single chat to control all your apps. No more switching between tabs — manage everything from one place.</p>
-        </div>
-
-        <!-- Card 4 -->
+        <!-- Software a medida -->
         <div class="feature-card glass-card rounded-2xl p-8 reveal group">
           <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500/20 to-purple-500/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <svg class="w-7 h-7 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.491 48.491 0 01-4.163-.3c-1.108-.128-2.025-1.024-2.025-2.142 0-2.496 4.518-3.913 8.145-3.913s8.145 1.417 8.145 3.913c0 1.118-.917 2.014-2.025 2.142a48.49 48.49 0 01-4.163.3.64.64 0 01-.657-.643v0zm0 0V5.75m-6.5 8.25v-.482c0-.632.12-1.253.353-1.837.234-.583.578-1.103.998-1.512m9.298 0c.42.409.764.929.998 1.512.234.584.353 1.205.353 1.837v.482M6.75 14c0 3.314 2.35 6 5.25 6s5.25-2.686 5.25-6"/></svg>
+            <svg class="w-7 h-7 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
           </div>
-          <h3 class="text-xl font-bold mb-3">3,247+ App Integrations</h3>
-          <p class="text-brand-muted leading-relaxed">Connect Gmail, Slack, Notion, Calendar, GitHub, Shopify, and thousands more. New integrations added weekly.</p>
+          <h3 class="text-xl font-bold mb-3">Software a Medida</h3>
+          <p class="text-brand-muted leading-relaxed">Aplicaciones web y moviles, plataformas corporativas, dashboards, CRM y herramientas de productividad.</p>
         </div>
 
-        <!-- Card 5 -->
-        <div class="feature-card glass-card rounded-2xl p-8 reveal group sm:col-span-2 lg:col-span-1">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-500/20 to-rose-500/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <svg class="w-7 h-7 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+        <!-- Educacion -->
+        <div class="feature-card glass-card rounded-2xl p-8 reveal group">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-accent/20 to-brand-accent/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-7 h-7 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg>
           </div>
-          <h3 class="text-xl font-bold mb-3">Data Privacy & Security</h3>
-          <p class="text-brand-muted leading-relaxed">Your data stays 100% isolated. Enterprise-grade encryption, SOC 2 compliance, and zero data sharing between users.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== HOW IT WORKS ===== -->
-  <section id="features" class="py-24 lg:py-32 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-20 reveal">
-        <span class="text-brand-electric text-sm font-semibold uppercase tracking-wider">How it Works</span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4">
-          Three steps to <span class="gradient-text">automation</span>
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8 lg:gap-12 relative">
-        <!-- Connector line (desktop) -->
-        <div class="hidden md:block absolute top-12 left-[20%] right-[20%] h-px bg-gradient-to-r from-brand-electric/50 via-brand-accent/50 to-brand-success/50"></div>
-
-        <!-- Step 1 -->
-        <div class="text-center reveal">
-          <div class="relative inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-brand-electric/10 to-brand-electric/5 border border-brand-electric/20 mb-8">
-            <lord-icon src="https://cdn.lordicon.com/lbjtvqiv.json" trigger="loop" delay="2000" colors="primary:#00D4FF,secondary:#f59e0b" style="width:56px;height:56px"></lord-icon>
-          </div>
-          <h3 class="text-xl font-bold mb-3">Connect your apps</h3>
-          <p class="text-brand-muted leading-relaxed">Link your favorite tools in seconds. Gmail, Slack, Notion, Calendar — over 3,247 apps ready to go.</p>
+          <h3 class="text-xl font-bold mb-3">Educacion</h3>
+          <p class="text-brand-muted leading-relaxed">Plataformas e-learning, academias digitales, sistemas de suscripcion, apps educativas y LMS.</p>
         </div>
 
-        <!-- Step 2 -->
-        <div class="text-center reveal">
-          <div class="relative inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-brand-accent/10 to-brand-accent/5 border border-brand-accent/20 mb-8">
-            <lord-icon src="https://cdn.lordicon.com/lewtedlh.json" trigger="loop" delay="2500" colors="primary:#f59e0b,secondary:#00D4FF" style="width:56px;height:56px"></lord-icon>
+        <!-- IA -->
+        <div class="feature-card glass-card rounded-2xl p-8 reveal group">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-violet-500/20 to-violet-500/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-7 h-7 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/></svg>
           </div>
-          <h3 class="text-xl font-bold mb-3">Describe your task</h3>
-          <p class="text-brand-muted leading-relaxed">Tell Dabox what you need in plain English. No code, no complex setups. Just talk to it like a teammate.</p>
+          <h3 class="text-xl font-bold mb-3">Inteligencia Artificial</h3>
+          <p class="text-brand-muted leading-relaxed">Senales de mercado, analisis predictivo, automatizacion inteligente, chatbots y dashboards con IA.</p>
         </div>
 
-        <!-- Step 3 -->
-        <div class="text-center reveal">
-          <div class="relative inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-brand-success/10 to-brand-success/5 border border-brand-success/20 mb-8">
-            <lord-icon src="https://cdn.lordicon.com/lupuorrc.json" trigger="loop" delay="3000" colors="primary:#10B981,secondary:#00D4FF" style="width:56px;height:56px"></lord-icon>
+        <!-- Blockchain -->
+        <div class="feature-card glass-card rounded-2xl p-8 reveal group">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500/20 to-orange-500/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-7 h-7 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/></svg>
           </div>
-          <h3 class="text-xl font-bold mb-3">AI executes it</h3>
-          <p class="text-brand-muted leading-relaxed">Dabox processes your request, coordinates between apps, and delivers results — all automatically.</p>
+          <h3 class="text-xl font-bold mb-3">Blockchain</h3>
+          <p class="text-brand-muted leading-relaxed">Tokenizacion de activos, smart contracts, plataformas descentralizadas y gestion de activos digitales.</p>
+        </div>
+
+        <!-- Diseno UX -->
+        <div class="feature-card glass-card rounded-2xl p-8 reveal group">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500/20 to-pink-500/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-7 h-7 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Diseno UI/UX</h3>
+          <p class="text-brand-muted leading-relaxed">Design systems, prototipos interactivos, interfaces de usuario y experiencia de producto digital.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== USE CASES ===== -->
-  <section class="py-24 lg:py-32 relative">
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-accent/[0.02] to-transparent pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="text-center mb-16 reveal">
-        <span class="text-brand-electric text-sm font-semibold uppercase tracking-wider">Use Cases</span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
-          See it <span class="gradient-text">in action</span>
-        </h2>
-        <p class="text-brand-muted text-lg max-w-2xl mx-auto">Real examples of tasks you can automate with a single message.</p>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="feature-card glass-card rounded-xl p-6 reveal group cursor-pointer">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-8 h-8 rounded-lg bg-red-500/10 flex items-center justify-center"><svg class="w-4 h-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg></div>
-            <span class="text-xs text-brand-electric font-medium bg-brand-electric/10 px-2 py-0.5 rounded-full">Gmail</span>
-          </div>
-          <p class="text-sm font-medium leading-relaxed">"Summarize my emails from today"</p>
-          <div class="mt-3 text-xs text-brand-muted opacity-0 group-hover:opacity-100 transition-opacity">Scans inbox → extracts key info → delivers summary</div>
-        </div>
-
-        <div class="feature-card glass-card rounded-xl p-6 reveal group cursor-pointer">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center"><svg class="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg></div>
-            <span class="text-xs text-brand-success font-medium bg-brand-success/10 px-2 py-0.5 rounded-full">Calendar</span>
-          </div>
-          <p class="text-sm font-medium leading-relaxed">"Block my calendar tomorrow from 9 to 12"</p>
-          <div class="mt-3 text-xs text-brand-muted opacity-0 group-hover:opacity-100 transition-opacity">Creates event → sets as busy → confirms</div>
-        </div>
-
-        <div class="feature-card glass-card rounded-xl p-6 reveal group cursor-pointer">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center"><svg class="w-4 h-4 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"/></svg></div>
-            <span class="text-xs text-purple-400 font-medium bg-purple-400/10 px-2 py-0.5 rounded-full">Slack</span>
-          </div>
-          <p class="text-sm font-medium leading-relaxed">"Post in Slack that the deploy was successful"</p>
-          <div class="mt-3 text-xs text-brand-muted opacity-0 group-hover:opacity-100 transition-opacity">Sends message → tags channel → adds status</div>
-        </div>
-
-        <div class="feature-card glass-card rounded-xl p-6 reveal group cursor-pointer">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center"><svg class="w-4 h-4 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg></div>
-            <span class="text-xs text-brand-accent font-medium bg-brand-accent/10 px-2 py-0.5 rounded-full">Notion</span>
-          </div>
-          <p class="text-sm font-medium leading-relaxed">"Create a task in Notion to review the report"</p>
-          <div class="mt-3 text-xs text-brand-muted opacity-0 group-hover:opacity-100 transition-opacity">Creates task → assigns priority → sets due date</div>
-        </div>
-
-        <div class="feature-card glass-card rounded-xl p-6 reveal group cursor-pointer">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-8 h-8 rounded-lg bg-gray-500/10 flex items-center justify-center"><svg class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg></div>
-            <span class="text-xs text-gray-400 font-medium bg-gray-400/10 px-2 py-0.5 rounded-full">GitHub</span>
-          </div>
-          <p class="text-sm font-medium leading-relaxed">"Create an issue for the login bug on GitHub"</p>
-          <div class="mt-3 text-xs text-brand-muted opacity-0 group-hover:opacity-100 transition-opacity">Opens issue → adds labels → assigns team</div>
-        </div>
-
-        <div class="feature-card glass-card rounded-xl p-6 reveal group cursor-pointer">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center"><svg class="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0112 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25m-17.25 0h7.5c.621 0 1.125.504 1.125 1.125M3.375 8.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m17.25-3.75h-7.5c-.621 0-1.125.504-1.125 1.125m8.625-1.125c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M12 10.875v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125M12 12h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125M21.375 12c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125M12 17.625v-1.5m0 1.5c0 .621.504 1.125 1.125 1.125m-2.25 0c-.621 0-1.125-.504-1.125-1.125m0 0v-1.5c0-.621.504-1.125 1.125-1.125m0 0h7.5"/></svg></div>
-            <span class="text-xs text-brand-success font-medium bg-brand-success/10 px-2 py-0.5 rounded-full">Sheets</span>
-          </div>
-          <p class="text-sm font-medium leading-relaxed">"Add this week's sales data to the spreadsheet"</p>
-          <div class="mt-3 text-xs text-brand-muted opacity-0 group-hover:opacity-100 transition-opacity">Formats data → updates sheet → recalculates totals</div>
-        </div>
-
-        <div class="feature-card glass-card rounded-xl p-6 reveal group cursor-pointer">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center"><svg class="w-4 h-4 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/></svg></div>
-            <span class="text-xs text-brand-electric font-medium bg-brand-electric/10 px-2 py-0.5 rounded-full">Shopify</span>
-          </div>
-          <p class="text-sm font-medium leading-relaxed">"Send me a report of today's orders from Shopify"</p>
-          <div class="mt-3 text-xs text-brand-muted opacity-0 group-hover:opacity-100 transition-opacity">Pulls orders → generates summary → sends to you</div>
-        </div>
-
-        <div class="feature-card glass-card rounded-xl p-6 reveal group cursor-pointer">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center"><svg class="w-4 h-4 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"/></svg></div>
-            <span class="text-xs text-brand-accent font-medium bg-brand-accent/10 px-2 py-0.5 rounded-full">Drive</span>
-          </div>
-          <p class="text-sm font-medium leading-relaxed">"Organize my Drive files by project folder"</p>
-          <div class="mt-3 text-xs text-brand-muted opacity-0 group-hover:opacity-100 transition-opacity">Scans files → categorizes → moves to folders</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== INTEGRATIONS ===== -->
-  <section id="integrations" class="py-24 lg:py-32 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16 reveal">
-        <span class="text-brand-electric text-sm font-semibold uppercase tracking-wider">Integrations</span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
-          <span class="gradient-text">3,247+ apps</span> in one chat
-        </h2>
-        <p class="text-brand-muted text-lg max-w-2xl mx-auto">Connect every tool your team uses. New integrations added weekly.</p>
-      </div>
-    </div>
-
-    <!-- Carousel Row 1 -->
-    <div class="relative mb-6 overflow-hidden">
-      <div class="carousel-track animate-scroll">
-        <div class="flex gap-4 pr-4" id="carousel1"></div>
-        <div class="flex gap-4 pr-4" id="carousel1-dup"></div>
-      </div>
-    </div>
-
-    <!-- Carousel Row 2 -->
-    <div class="relative overflow-hidden">
-      <div class="carousel-track animate-scroll" style="animation-direction: reverse; animation-duration: 35s;">
-        <div class="flex gap-4 pr-4" id="carousel2"></div>
-        <div class="flex gap-4 pr-4" id="carousel2-dup"></div>
-      </div>
-    </div>
-
-    <div class="text-center mt-12 reveal">
-      <p class="text-brand-muted text-sm">And <strong class="text-white">3,200+</strong> more apps available</p>
-    </div>
-  </section>
-
-  <!-- ===== TESTIMONIALS ===== -->
-  <section class="py-24 lg:py-32 relative">
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-electric/[0.02] to-transparent pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="text-center mb-16 reveal">
-        <span class="text-brand-electric text-sm font-semibold uppercase tracking-wider">Testimonials</span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4">
-          Loved by <span class="gradient-text">2,100+ teams</span>
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Testimonial 1 -->
-        <div class="glass-card rounded-2xl p-8 reveal">
-          <div class="flex items-center gap-1 mb-4">
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          </div>
-          <p class="text-brand-muted leading-relaxed mb-6">"Dabox replaced three different automation tools for us. The AI actually understands what I mean — I just type what I need and it handles the rest. Saves our team at least 10 hours per week."</p>
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-electric to-cyan-400 flex items-center justify-center text-brand-deep font-bold text-sm">SM</div>
-            <div>
-              <p class="font-semibold text-sm">Sarah Mitchell</p>
-              <p class="text-xs text-brand-muted">Head of Operations, TechScale</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 2 -->
-        <div class="glass-card rounded-2xl p-8 reveal">
-          <div class="flex items-center gap-1 mb-4">
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          </div>
-          <p class="text-brand-muted leading-relaxed mb-6">"The persistent memory is a game-changer. Dabox remembers how I like my reports formatted, which channels to post to, and even my preferred meeting times. It feels like having a real assistant."</p>
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-accent to-amber-400 flex items-center justify-center text-brand-deep font-bold text-sm">JR</div>
-            <div>
-              <p class="font-semibold text-sm">James Rodriguez</p>
-              <p class="text-xs text-brand-muted">CTO, CloudNine Labs</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="glass-card rounded-2xl p-8 reveal">
-          <div class="flex items-center gap-1 mb-4">
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          </div>
-          <p class="text-brand-muted leading-relaxed mb-6">"We moved from Zapier to Dabox and the difference is night and day. Natural language automation is so much faster than building visual workflows. Our non-technical team members love it."</p>
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-success to-emerald-400 flex items-center justify-center text-brand-deep font-bold text-sm">LC</div>
-            <div>
-              <p class="font-semibold text-sm">Laura Chen</p>
-              <p class="text-xs text-brand-muted">VP Product, NexaFlow</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 4 -->
-        <div class="glass-card rounded-2xl p-8 reveal md:col-span-2 lg:col-span-2">
-          <div class="flex items-center gap-1 mb-4">
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          </div>
-          <p class="text-brand-muted leading-relaxed mb-6">"As a solo founder, Dabox is like having a full ops team. I connect my email, calendar, Slack, and project management — then just tell it what to do. The security aspect was crucial for us since we handle sensitive client data, and Dabox's isolated architecture gave us the confidence to go all in."</p>
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-violet-400 flex items-center justify-center text-white font-bold text-sm">AK</div>
-            <div>
-              <p class="font-semibold text-sm">Alex Kim</p>
-              <p class="text-xs text-brand-muted">Founder & CEO, DataBridge</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 5 -->
-        <div class="glass-card rounded-2xl p-8 reveal">
-          <div class="flex items-center gap-1 mb-4">
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          </div>
-          <p class="text-brand-muted leading-relaxed mb-6">"Our marketing team adopted Dabox in a week. The learning curve is basically zero — if you can type a sentence, you can automate your workflow. Incredible product."</p>
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-rose-500 to-pink-400 flex items-center justify-center text-white font-bold text-sm">MP</div>
-            <div>
-              <p class="font-semibold text-sm">Maria Petrov</p>
-              <p class="text-xs text-brand-muted">Marketing Director, GrowthPulse</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PORTFOLIO ===== -->
-  <section id="portfolio" class="py-24 lg:py-32 relative">
+  <!-- ===== PORTAFOLIO ===== -->
+  <section id="portafolio" class="py-24 lg:py-32 relative">
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-accent/[0.02] to-transparent pointer-events-none"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="text-center mb-12 reveal">
-        <span class="text-brand-electric text-sm font-semibold uppercase tracking-wider">Our Work</span>
+        <span class="text-brand-electric text-sm font-semibold uppercase tracking-wider">Portafolio</span>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
-          Projects we've <span class="gradient-text">built</span>
+          Proyectos que hemos <span class="gradient-text">construido</span>
         </h2>
-        <p class="text-brand-muted text-lg max-w-2xl mx-auto">27+ digital products across fintech, AI, education, blockchain, and custom software — from concept to production.</p>
+        <p class="text-brand-muted text-lg max-w-2xl mx-auto">+27 productos digitales en fintech, IA, educacion, blockchain y software a medida &mdash; del concepto a produccion.</p>
       </div>
 
       <!-- Stats bar -->
       <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 mb-12 reveal">
         <div class="text-center">
           <p class="text-3xl font-black gradient-text">27+</p>
-          <p class="text-xs text-brand-muted mt-1">Projects</p>
+          <p class="text-xs text-brand-muted mt-1">Proyectos</p>
         </div>
         <div class="w-px h-8 bg-brand-border hidden sm:block"></div>
         <div class="text-center">
           <p class="text-3xl font-black gradient-text">6</p>
-          <p class="text-xs text-brand-muted mt-1">Categories</p>
+          <p class="text-xs text-brand-muted mt-1">Industrias</p>
         </div>
         <div class="w-px h-8 bg-brand-border hidden sm:block"></div>
         <div class="text-center">
           <p class="text-3xl font-black gradient-text">15+</p>
-          <p class="text-xs text-brand-muted mt-1">Delivered</p>
+          <p class="text-xs text-brand-muted mt-1">Entregados</p>
         </div>
         <div class="w-px h-8 bg-brand-border hidden sm:block"></div>
         <div class="text-center">
           <p class="text-3xl font-black gradient-text">2024-26</p>
-          <p class="text-xs text-brand-muted mt-1">Active Years</p>
+          <p class="text-xs text-brand-muted mt-1">Anos activos</p>
         </div>
       </div>
 
-      <!-- Filter buttons -->
+      <!-- Filtros -->
       <div class="flex flex-wrap items-center justify-center gap-2 mb-10 reveal">
-        <button class="filter-btn active px-4 py-2 rounded-full text-sm font-medium border border-white/10" data-filter="all">All</button>
+        <button class="filter-btn active px-4 py-2 rounded-full text-sm font-medium border border-white/10" data-filter="all">Todos</button>
         <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-white/10 text-brand-muted hover:text-white" data-filter="fintech">Fintech</button>
         <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-white/10 text-brand-muted hover:text-white" data-filter="software">Software</button>
-        <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-white/10 text-brand-muted hover:text-white" data-filter="educacion">Education</button>
-        <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-white/10 text-brand-muted hover:text-white" data-filter="ia">AI</button>
+        <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-white/10 text-brand-muted hover:text-white" data-filter="educacion">Educacion</button>
+        <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-white/10 text-brand-muted hover:text-white" data-filter="ia">IA</button>
         <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-white/10 text-brand-muted hover:text-white" data-filter="blockchain">Blockchain</button>
-        <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-white/10 text-brand-muted hover:text-white" data-filter="diseno">Design/UX</button>
+        <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-white/10 text-brand-muted hover:text-white" data-filter="diseno">Diseno/UX</button>
       </div>
 
-      <!-- Portfolio grid -->
-      <div class="portfolio-grid reveal" id="portfolioGrid">
-
-        <!-- NIIO -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="fintech" data-href="https://niiopay.com/">
-          <div class="h-2 bg-gradient-to-r from-brand-electric to-cyan-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-electric/10 flex items-center justify-center"><svg class="w-5 h-5 text-brand-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">NIIO</h3>
-                  <span class="text-xs text-brand-muted">2025</span>
-                </div>
-              </div>
-              <span class="status-badge status-en-proceso">In Progress</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Fintech ecosystem for payments and merchants — KYC, cards, dashboard.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-brand-electric bg-brand-electric/10 px-2.5 py-1 rounded-full">Fintech</span>
-              <a href="https://niiopay.com/" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                Visit site <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Loan Pro -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="fintech" data-href="https://app.loanpro.com.co/auth/sign-in">
-          <div class="h-2 bg-gradient-to-r from-brand-success to-emerald-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-success/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">Loan Pro</h3>
-                  <span class="text-xs text-brand-muted">2024</span>
-                </div>
-              </div>
-              <span class="status-badge status-terminado">Delivered</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Digital loan origination — scoring, verification, portfolio management.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-brand-electric bg-brand-electric/10 px-2.5 py-1 rounded-full">Fintech</span>
-              <a href="https://app.loanpro.com.co/auth/sign-in" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                Visit site <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Alivio Wallet -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="fintech" data-href="https://aliviofinance.com/">
-          <div class="h-2 bg-gradient-to-r from-brand-success to-emerald-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-success/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">Alivio Wallet</h3>
-                  <span class="text-xs text-brand-muted">2025</span>
-                </div>
-              </div>
-              <span class="status-badge status-terminado">Delivered</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Digital wallet and payments — disbursement, multi-currency/crypto, security.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-brand-electric bg-brand-electric/10 px-2.5 py-1 rounded-full">Fintech</span>
-              <a href="https://aliviofinance.com/" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                Visit site <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Unique Fintech Suite -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="fintech" data-href="https://www.somosuniquecapital.com/">
-          <div class="h-2 bg-gradient-to-r from-brand-electric to-cyan-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-electric/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">Unique Fintech Suite</h3>
-                  <span class="text-xs text-brand-muted">2025</span>
-                </div>
-              </div>
-              <span class="status-badge status-en-proceso">In Progress</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Full ecosystem: Unique Payment + Unique APP Trading + Unique Fintech.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-brand-electric bg-brand-electric/10 px-2.5 py-1 rounded-full">Fintech</span>
-              <a href="https://www.somosuniquecapital.com/" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                Visit site <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Unique Payment -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="fintech" data-href="https://www.somosuniquecapital.com/">
-          <div class="h-2 bg-gradient-to-r from-brand-success to-emerald-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-success/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">Unique Payment</h3>
-                  <span class="text-xs text-brand-muted">2025</span>
-                </div>
-              </div>
-              <span class="status-badge status-terminado">Delivered</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Digital payments platform for the Unique Capital ecosystem.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-brand-electric bg-brand-electric/10 px-2.5 py-1 rounded-full">Fintech</span>
-              <a href="https://www.somosuniquecapital.com/" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                Visit site <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Unique APP Trading -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="fintech">
-          <div class="h-2 bg-gradient-to-r from-brand-electric to-cyan-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-electric/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">Unique APP Trading</h3>
-                  <span class="text-xs text-brand-muted">2025</span>
-                </div>
-              </div>
-              <span class="status-badge status-en-proceso">In Progress</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Trading application for the Unique Capital financial ecosystem.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-brand-electric bg-brand-electric/10 px-2.5 py-1 rounded-full">Fintech</span>
-              <span class="text-xs text-brand-muted/50">Coming soon</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pay2Neo -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="fintech">
-          <div class="h-2 bg-gradient-to-r from-brand-electric to-cyan-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-electric/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">Pay2Neo</h3>
-                  <span class="text-xs text-brand-muted">2026</span>
-                </div>
-              </div>
-              <span class="status-badge status-en-proceso">In Progress</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Next-generation fintech payment processing platform.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-brand-electric bg-brand-electric/10 px-2.5 py-1 rounded-full">Fintech</span>
-              <span class="text-xs text-brand-muted/50">Coming soon</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- FinTrax -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="fintech" data-href="https://app-fintrax-production.up.railway.app/">
-          <div class="h-2 bg-gradient-to-r from-brand-electric to-cyan-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-electric/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">FinTrax</h3>
-                  <span class="text-xs text-brand-muted">2026</span>
-                </div>
-              </div>
-              <span class="status-badge status-en-proceso">In Progress</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Financial tracking and analytics platform.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-brand-electric bg-brand-electric/10 px-2.5 py-1 rounded-full">Fintech</span>
-              <a href="https://app-fintrax-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                Visit site <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Alerta Rosa -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="software" data-href="https://www.alertarosa.co/">
-          <div class="h-2 bg-gradient-to-r from-rose-500 to-pink-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-rose-500/10 flex items-center justify-center "><svg class="w-5 h-5 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">Alerta Rosa</h3>
-                  <span class="text-xs text-brand-muted">2025</span>
-                </div>
-              </div>
-              <span class="status-badge status-en-proceso">In Progress</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Safety and prevention platform with a social purpose.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-purple-400 bg-purple-400/10 px-2.5 py-1 rounded-full">Software</span>
-              <a href="https://www.alertarosa.co/" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                Visit site <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- TuCop -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="software" data-href="https://tucop.xyz/">
-          <div class="h-2 bg-gradient-to-r from-brand-success to-emerald-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-success/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">TuCop</h3>
-                  <span class="text-xs text-brand-muted">2024</span>
-                </div>
-              </div>
-              <span class="status-badge status-terminado">Delivered</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Corporate suite for process optimization and team productivity.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-purple-400 bg-purple-400/10 px-2.5 py-1 rounded-full">Software</span>
-              <a href="https://tucop.xyz/" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                Visit site <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Innertraders -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="software" data-href="https://appinnertraders-production.up.railway.app/dashboard/home">
-          <div class="h-2 bg-gradient-to-r from-brand-accent to-amber-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-accent/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">Innertraders</h3>
-                  <span class="text-xs text-brand-muted">2025</span>
-                </div>
-              </div>
-              <span class="status-badge status-en-proceso">In Progress</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Journaling and analytics for traders — import, metrics, reports.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-purple-400 bg-purple-400/10 px-2.5 py-1 rounded-full">Software</span>
-              <a href="https://appinnertraders-production.up.railway.app/dashboard/home" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                Visit site <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Audiovisual Ciudadano -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="software" data-href="https://contacto.camara.gov.co/">
-          <div class="h-2 bg-gradient-to-r from-brand-success to-emerald-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-success/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h1.5C5.496 19.5 6 18.996 6 18.375m-2.625 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-1.5A1.125 1.125 0 0118 18.375M20.625 4.5H3.375m17.25 0c.621 0 1.125.504 1.125 1.125M20.625 4.5h-1.5C18.504 4.5 18 5.004 18 5.625m3.75 0v1.5c0 .621-.504 1.125-1.125 1.125M3.375 4.5c-.621 0-1.125.504-1.125 1.125M3.375 4.5h1.5C5.496 4.5 6 5.004 6 5.625m-3.75 0v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25m-17.25 0h7.5c.621 0 1.125.504 1.125 1.125M3.375 8.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m17.25-3.75h-7.5c-.621 0-1.125.504-1.125 1.125"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">Audiovisual Ciudadano</h3>
-                  <span class="text-xs text-brand-muted">2025</span>
-                </div>
-              </div>
-              <span class="status-badge status-terminado">Delivered</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Platform for community audiovisual production and distribution.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-purple-400 bg-purple-400/10 px-2.5 py-1 rounded-full">Software</span>
-              <a href="https://contacto.camara.gov.co/" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                Visit site <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Click4Pets -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="software" data-href="https://click4pet.org/">
-          <div class="h-2 bg-gradient-to-r from-brand-success to-emerald-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-success/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">Click4Pets</h3>
-                  <span class="text-xs text-brand-muted">2025</span>
-                </div>
-              </div>
-              <span class="status-badge status-terminado">Delivered</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Pet community platform with content and marketplace.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-purple-400 bg-purple-400/10 px-2.5 py-1 rounded-full">Software</span>
-              <a href="https://click4pet.org/" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                Visit site <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- DCZonance -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="software" data-href="https://www.dczonance.online/">
-          <div class="h-2 bg-gradient-to-r from-brand-success to-emerald-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-success/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.348 14.651a3.75 3.75 0 010-5.303m5.304 0a3.75 3.75 0 010 5.303m-7.425 2.122a6.75 6.75 0 010-9.546m9.546 0a6.75 6.75 0 010 9.546M5.106 18.894c-3.808-3.808-3.808-9.98 0-13.789m13.788 0c3.808 3.808 3.808 9.981 0 13.79M12 12h.008v.007H12V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">DCZonance</h3>
-                  <span class="text-xs text-brand-muted">2026</span>
-                </div>
-              </div>
-              <span class="status-badge status-terminado">Delivered</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Digital resonance platform — custom software solution.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-purple-400 bg-purple-400/10 px-2.5 py-1 rounded-full">Software</span>
-              <a href="https://www.dczonance.online/" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                Visit site <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- LordGolden -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="software">
-          <div class="h-2 bg-gradient-to-r from-brand-accent to-amber-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-accent/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">LordGolden</h3>
-                  <span class="text-xs text-brand-muted">2026</span>
-                </div>
-              </div>
-              <span class="status-badge status-en-cotizacion">Quoting</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Premium custom software project — currently in scoping phase.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-purple-400 bg-purple-400/10 px-2.5 py-1 rounded-full">Software</span>
-              <span class="text-xs text-brand-muted/50">Coming soon</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- UrbanPass -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="software">
-          <div class="h-2 bg-gradient-to-r from-brand-electric to-cyan-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-electric/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 010 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 010-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375z"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">UrbanPass</h3>
-                  <span class="text-xs text-brand-muted">2026</span>
-                </div>
-              </div>
-              <span class="status-badge status-en-proceso">In Progress</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Urban access and pass management platform.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-purple-400 bg-purple-400/10 px-2.5 py-1 rounded-full">Software</span>
-              <span class="text-xs text-brand-muted/50">Coming soon</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- MiFlowPro -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="software">
-          <div class="h-2 bg-gradient-to-r from-brand-electric to-cyan-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-electric/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182M21.015 4.356v4.992"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">MiFlowPro</h3>
-                  <span class="text-xs text-brand-muted">2026</span>
-                </div>
-              </div>
-              <span class="status-badge status-en-proceso">In Progress</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Workflow and process management platform.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-purple-400 bg-purple-400/10 px-2.5 py-1 rounded-full">Software</span>
-              <span class="text-xs text-brand-muted/50">Coming soon</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- DaboxLab -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="software" data-href="https://www.daboxhub.com/es">
-          <div class="h-2 bg-gradient-to-r from-brand-electric to-cyan-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-electric/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 5.287c.254.957-.549 1.863-1.547 1.698-1.592-.264-3.259-.397-4.655-.397-1.396 0-3.063.133-4.655.397-.998.165-1.801-.741-1.547-1.698L5 14.5"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">DaboxLab</h3>
-                  <span class="text-xs text-brand-muted">2026</span>
-                </div>
-              </div>
-              <span class="status-badge status-en-proceso">In Progress</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Dabox innovation lab — experimental product development.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-purple-400 bg-purple-400/10 px-2.5 py-1 rounded-full">Software</span>
-              <a href="https://www.daboxhub.com/es" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                Visit site <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Goldbell -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="software">
-          <div class="h-2 bg-gradient-to-r from-brand-electric to-cyan-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-accent/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">Goldbell</h3>
-                  <span class="text-xs text-brand-muted">2026</span>
-                </div>
-              </div>
-              <span class="status-badge status-en-proceso">In Progress</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Custom software solution — currently in development.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-purple-400 bg-purple-400/10 px-2.5 py-1 rounded-full">Software</span>
-              <span class="text-xs text-brand-muted/50">Coming soon</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Streaming -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="software">
-          <div class="h-2 bg-gradient-to-r from-brand-electric to-cyan-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-electric/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 20.25h12m-7.5-3v3m3-3v3m-10.125-3h17.25c.621 0 1.125-.504 1.125-1.125V4.875c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125z"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">Streaming</h3>
-                  <span class="text-xs text-brand-muted">2026</span>
-                </div>
-              </div>
-              <span class="status-badge status-en-proceso">In Progress</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Custom streaming platform solution.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-purple-400 bg-purple-400/10 px-2.5 py-1 rounded-full">Software</span>
-              <span class="text-xs text-brand-muted/50">Coming soon</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Premium Academy DG -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="educacion" data-href="https://www.premiumacademy.pro/home">
-          <div class="h-2 bg-gradient-to-r from-brand-success to-emerald-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-success/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">Premium Academy DG</h3>
-                  <span class="text-xs text-brand-muted">2025</span>
-                </div>
-              </div>
-              <span class="status-badge status-terminado">Delivered</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Financial education academy — courses, community, certifications.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-brand-accent bg-brand-accent/10 px-2.5 py-1 rounded-full">Education</span>
-              <a href="https://www.premiumacademy.pro/home" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                Visit site <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- DeepAcademy -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="educacion" data-href="https://signals.deepcapitals.com/">
-          <div class="h-2 bg-gradient-to-r from-brand-success to-emerald-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-success/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">DeepAcademy</h3>
-                  <span class="text-xs text-brand-muted">2025</span>
-                </div>
-              </div>
-              <span class="status-badge status-terminado">Delivered</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Multi-purpose e-learning platform — SSO, subscriptions, analytics.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-brand-accent bg-brand-accent/10 px-2.5 py-1 rounded-full">Education</span>
-              <a href="https://signals.deepcapitals.com/" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                Visit site <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- APP Premium Academy DG -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="educacion" data-href="https://www.premiumacademy.pro/home">
-          <div class="h-2 bg-gradient-to-r from-brand-electric to-cyan-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-electric/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">Premium Academy App</h3>
-                  <span class="text-xs text-brand-muted">2026</span>
-                </div>
-              </div>
-              <span class="status-badge status-en-proceso">In Progress</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Mobile app companion for Premium Academy DG platform.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-brand-accent bg-brand-accent/10 px-2.5 py-1 rounded-full">Education</span>
-              <a href="https://www.premiumacademy.pro/home" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                Visit site <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- News & Journal Premium -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="educacion" data-href="https://www.premiumacademy.pro/home">
-          <div class="h-2 bg-gradient-to-r from-brand-electric to-cyan-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-electric/10 flex items-center justify-center "><svg class="w-5 h-5 text-brand-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">News & Journal Premium</h3>
-                  <span class="text-xs text-brand-muted">2026</span>
-                </div>
-              </div>
-              <span class="status-badge status-en-proceso">In Progress</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">News and journal platform for the Premium Academy ecosystem.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-brand-accent bg-brand-accent/10 px-2.5 py-1 rounded-full">Education</span>
-              <a href="https://www.premiumacademy.pro/home" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                Visit site <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- DeepSignals -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="ia" data-href="https://signals.deepcapitals.com/">
-          <div class="h-2 bg-gradient-to-r from-violet-500 to-purple-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-violet-500/10 flex items-center justify-center "><svg class="w-5 h-5 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">DeepSignals</h3>
-                  <span class="text-xs text-brand-muted">2025</span>
-                </div>
-              </div>
-              <span class="status-badge status-terminado">Delivered</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Real-time market intelligence — signals, analysis, notifications, dashboards.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-violet-400 bg-violet-400/10 px-2.5 py-1 rounded-full">AI</span>
-              <a href="https://signals.deepcapitals.com/" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                Visit site <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- TokenByU -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="blockchain" data-href="https://tokenbyu.com/">
-          <div class="h-2 bg-gradient-to-r from-orange-500 to-amber-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center "><svg class="w-5 h-5 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">TokenByU</h3>
-                  <span class="text-xs text-brand-muted">2026</span>
-                </div>
-              </div>
-              <span class="status-badge status-en-proceso">In Progress</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">Blockchain tokenization platform — digital assets and token management.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-orange-400 bg-orange-400/10 px-2.5 py-1 rounded-full">Blockchain</span>
-              <a href="https://tokenbyu.com/" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                Visit site <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Astralem -->
-        <div class="portfolio-card glass-card rounded-2xl overflow-hidden group" data-category="diseno" data-href="https://www.figma.com/proto/Se92VB0ZBmiuhn7uqaIRPd/Astralem----Design-system">
-          <div class="h-2 bg-gradient-to-r from-pink-500 to-rose-400"></div>
-          <div class="p-6">
-            <div class="flex items-start justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-pink-500/10 flex items-center justify-center "><svg class="w-5 h-5 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg></div>
-                <div>
-                  <h3 class="font-bold text-lg">Astralem</h3>
-                  <span class="text-xs text-brand-muted">2025</span>
-                </div>
-              </div>
-              <span class="status-badge status-en-negociacion">Negotiating</span>
-            </div>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">UI/UX design and experience for digital products — design systems.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-medium text-pink-400 bg-pink-400/10 px-2.5 py-1 rounded-full">Design/UX</span>
-              <a href="https://www.figma.com/proto/Se92VB0ZBmiuhn7uqaIRPd/Astralem----Design-system" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link">
-                View prototype <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
+      <!-- Portfolio grid — generated by JS -->
+      <div class="portfolio-grid reveal" id="portfolioGrid"></div>
     </div>
   </section>
 
-  <!-- ===== PRICING ===== -->
-  <section id="pricing" class="py-24 lg:py-32 relative">
+  <!-- ===== PROCESO ===== -->
+  <section id="proceso" class="py-24 lg:py-32 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16 reveal">
-        <span class="text-brand-electric text-sm font-semibold uppercase tracking-wider">Pricing</span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
-          Simple, transparent <span class="gradient-text">pricing</span>
-        </h2>
-        <p class="text-brand-muted text-lg max-w-2xl mx-auto">Start free. Scale as you grow. No hidden fees.</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
-        <!-- Free -->
-        <div class="glass-card rounded-2xl p-8 reveal flex flex-col">
-          <div class="mb-8">
-            <h3 class="text-lg font-semibold mb-2">Free</h3>
-            <div class="flex items-baseline gap-1">
-              <span class="text-4xl font-black">$0</span>
-              <span class="text-brand-muted text-sm">/month</span>
-            </div>
-            <p class="text-brand-muted text-sm mt-2">Perfect for getting started</p>
-          </div>
-          <ul class="space-y-3 mb-8 flex-1">
-            <li class="flex items-center gap-3 text-sm text-brand-muted">
-              <svg class="w-4 h-4 text-brand-success flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              2 connected apps
-            </li>
-            <li class="flex items-center gap-3 text-sm text-brand-muted">
-              <svg class="w-4 h-4 text-brand-success flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              100K tokens/month
-            </li>
-            <li class="flex items-center gap-3 text-sm text-brand-muted">
-              <svg class="w-4 h-4 text-brand-success flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Basic memory
-            </li>
-            <li class="flex items-center gap-3 text-sm text-brand-muted">
-              <svg class="w-4 h-4 text-brand-success flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Community support
-            </li>
-            <li class="flex items-center gap-3 text-sm text-brand-muted/40">
-              <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-              API access
-            </li>
-            <li class="flex items-center gap-3 text-sm text-brand-muted/40">
-              <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-              Priority support
-            </li>
-          </ul>
-          <a href="#" class="w-full py-3.5 rounded-full border border-white/10 text-center font-semibold hover:bg-white/5 transition-all">Get started</a>
-        </div>
-
-        <!-- Pro (Popular) -->
-        <div class="pricing-popular glass-card rounded-2xl p-8 reveal flex flex-col relative">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-brand-electric to-cyan-400 text-brand-deep text-xs font-bold">Most Popular</div>
-          <div class="mb-8">
-            <h3 class="text-lg font-semibold mb-2">Pro</h3>
-            <div class="flex items-baseline gap-1">
-              <span class="text-4xl font-black">$29</span>
-              <span class="text-brand-muted text-sm">/month</span>
-            </div>
-            <p class="text-brand-muted text-sm mt-2">For professionals & small teams</p>
-          </div>
-          <ul class="space-y-3 mb-8 flex-1">
-            <li class="flex items-center gap-3 text-sm text-brand-muted">
-              <svg class="w-4 h-4 text-brand-success flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              10 connected apps
-            </li>
-            <li class="flex items-center gap-3 text-sm text-brand-muted">
-              <svg class="w-4 h-4 text-brand-success flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              2M tokens/month
-            </li>
-            <li class="flex items-center gap-3 text-sm text-brand-muted">
-              <svg class="w-4 h-4 text-brand-success flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Persistent memory
-            </li>
-            <li class="flex items-center gap-3 text-sm text-brand-muted">
-              <svg class="w-4 h-4 text-brand-success flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Priority support
-            </li>
-            <li class="flex items-center gap-3 text-sm text-brand-muted">
-              <svg class="w-4 h-4 text-brand-success flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Custom automations
-            </li>
-            <li class="flex items-center gap-3 text-sm text-brand-muted/40">
-              <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-              API access
-            </li>
-          </ul>
-          <a href="#" class="btn-shine w-full py-3.5 rounded-full bg-gradient-to-r from-brand-electric to-cyan-400 text-brand-deep text-center font-bold hover:shadow-lg hover:shadow-brand-electric/20 transition-all">Choose Pro</a>
-        </div>
-
-        <!-- Business -->
-        <div class="glass-card rounded-2xl p-8 reveal flex flex-col">
-          <div class="mb-8">
-            <h3 class="text-lg font-semibold mb-2">Business</h3>
-            <div class="flex items-baseline gap-1">
-              <span class="text-4xl font-black">$99</span>
-              <span class="text-brand-muted text-sm">/month</span>
-            </div>
-            <p class="text-brand-muted text-sm mt-2">For growing teams & enterprises</p>
-          </div>
-          <ul class="space-y-3 mb-8 flex-1">
-            <li class="flex items-center gap-3 text-sm text-brand-muted">
-              <svg class="w-4 h-4 text-brand-success flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              50 connected apps
-            </li>
-            <li class="flex items-center gap-3 text-sm text-brand-muted">
-              <svg class="w-4 h-4 text-brand-success flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              10M tokens/month
-            </li>
-            <li class="flex items-center gap-3 text-sm text-brand-muted">
-              <svg class="w-4 h-4 text-brand-success flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Advanced persistent memory
-            </li>
-            <li class="flex items-center gap-3 text-sm text-brand-muted">
-              <svg class="w-4 h-4 text-brand-success flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Dedicated support
-            </li>
-            <li class="flex items-center gap-3 text-sm text-brand-muted">
-              <svg class="w-4 h-4 text-brand-success flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Full API access
-            </li>
-            <li class="flex items-center gap-3 text-sm text-brand-muted">
-              <svg class="w-4 h-4 text-brand-success flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Team management
-            </li>
-          </ul>
-          <a href="#" class="w-full py-3.5 rounded-full border border-white/10 text-center font-semibold hover:bg-white/5 transition-all">Choose Business</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FAQ ===== -->
-  <section id="faq" class="py-24 lg:py-32 relative">
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-electric/[0.02] to-transparent pointer-events-none"></div>
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="text-center mb-16 reveal">
-        <span class="text-brand-electric text-sm font-semibold uppercase tracking-wider">FAQ</span>
+      <div class="text-center mb-20 reveal">
+        <span class="text-brand-electric text-sm font-semibold uppercase tracking-wider">Proceso</span>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4">
-          Got <span class="gradient-text">questions?</span>
+          Como <span class="gradient-text">trabajamos</span>
         </h2>
       </div>
 
-      <div class="space-y-3 reveal">
-        <!-- FAQ 1 -->
-        <div class="glass-card rounded-xl overflow-hidden">
-          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
-            <span class="font-semibold pr-4">What is Dabox and how does it work?</span>
-            <span class="faq-icon text-brand-electric text-xl font-light flex-shrink-0">+</span>
-          </button>
-          <div class="faq-content px-5">
-            <p class="text-brand-muted text-sm leading-relaxed pb-5">Dabox is an AI-powered automation platform that connects your apps (Gmail, Slack, Notion, Calendar, etc.) into a single intelligent chat. You describe tasks in plain language — like "summarize my emails" or "block my calendar" — and the AI executes them automatically across your connected apps.</p>
+      <div class="grid md:grid-cols-4 gap-8 lg:gap-12 relative">
+        <div class="hidden md:block absolute top-12 left-[15%] right-[15%] h-px bg-gradient-to-r from-brand-electric/50 via-brand-accent/50 to-brand-success/50"></div>
+
+        <!-- Paso 1 -->
+        <div class="text-center reveal">
+          <div class="relative inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-brand-electric/10 to-brand-electric/5 border border-brand-electric/20 mb-8">
+            <svg class="w-10 h-10 text-brand-electric" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
           </div>
+          <h3 class="text-xl font-bold mb-3">Descubrimiento</h3>
+          <p class="text-brand-muted leading-relaxed">Entendemos tu negocio, objetivos y requerimientos. Definimos alcance y roadmap.</p>
         </div>
 
-        <!-- FAQ 2 -->
-        <div class="glass-card rounded-xl overflow-hidden">
-          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
-            <span class="font-semibold pr-4">Is my data secure?</span>
-            <span class="faq-icon text-brand-electric text-xl font-light flex-shrink-0">+</span>
-          </button>
-          <div class="faq-content px-5">
-            <p class="text-brand-muted text-sm leading-relaxed pb-5">Absolutely. Your data is 100% isolated — we use enterprise-grade encryption, fully isolated credentials per user, and never share data between accounts. We're SOC 2 compliant and follow industry-leading security practices.</p>
+        <!-- Paso 2 -->
+        <div class="text-center reveal">
+          <div class="relative inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-brand-accent/10 to-brand-accent/5 border border-brand-accent/20 mb-8">
+            <svg class="w-10 h-10 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg>
           </div>
+          <h3 class="text-xl font-bold mb-3">Diseno</h3>
+          <p class="text-brand-muted leading-relaxed">Creamos wireframes, prototipos y el design system. Validamos contigo antes de desarrollar.</p>
         </div>
 
-        <!-- FAQ 3 -->
-        <div class="glass-card rounded-xl overflow-hidden">
-          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
-            <span class="font-semibold pr-4">What apps can I connect?</span>
-            <span class="faq-icon text-brand-electric text-xl font-light flex-shrink-0">+</span>
-          </button>
-          <div class="faq-content px-5">
-            <p class="text-brand-muted text-sm leading-relaxed pb-5">Dabox supports over 3,247 apps including Gmail, Google Calendar, Slack, Notion, GitHub, Shopify, Stripe, Jira, Linear, Figma, Asana, HubSpot, Salesforce, Discord, Trello, Airtable, and many more. New integrations are added every week.</p>
+        <!-- Paso 3 -->
+        <div class="text-center reveal">
+          <div class="relative inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-purple-500/10 to-purple-500/5 border border-purple-500/20 mb-8">
+            <svg class="w-10 h-10 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
           </div>
+          <h3 class="text-xl font-bold mb-3">Desarrollo</h3>
+          <p class="text-brand-muted leading-relaxed">Construimos con sprints agiles, entregas incrementales y comunicacion constante.</p>
         </div>
 
-        <!-- FAQ 4 -->
-        <div class="glass-card rounded-xl overflow-hidden">
-          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
-            <span class="font-semibold pr-4">What does "persistent memory" mean?</span>
-            <span class="faq-icon text-brand-electric text-xl font-light flex-shrink-0">+</span>
-          </button>
-          <div class="faq-content px-5">
-            <p class="text-brand-muted text-sm leading-relaxed pb-5">Persistent memory means Dabox remembers your preferences, past interactions, and context across conversations. It learns how you like things done — your preferred report formats, favorite Slack channels, meeting preferences — and applies that knowledge automatically.</p>
+        <!-- Paso 4 -->
+        <div class="text-center reveal">
+          <div class="relative inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-brand-success/10 to-brand-success/5 border border-brand-success/20 mb-8">
+            <svg class="w-10 h-10 text-brand-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
           </div>
-        </div>
-
-        <!-- FAQ 5 -->
-        <div class="glass-card rounded-xl overflow-hidden">
-          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
-            <span class="font-semibold pr-4">Can I try Dabox for free?</span>
-            <span class="faq-icon text-brand-electric text-xl font-light flex-shrink-0">+</span>
-          </button>
-          <div class="faq-content px-5">
-            <p class="text-brand-muted text-sm leading-relaxed pb-5">Yes! Our Free plan includes 2 connected apps, 100K tokens per month, and basic memory features — no credit card required. You can upgrade to Pro or Business anytime as your needs grow.</p>
-          </div>
-        </div>
-
-        <!-- FAQ 6 -->
-        <div class="glass-card rounded-xl overflow-hidden">
-          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
-            <span class="font-semibold pr-4">How is Dabox different from Zapier or Make?</span>
-            <span class="faq-icon text-brand-electric text-xl font-light flex-shrink-0">+</span>
-          </button>
-          <div class="faq-content px-5">
-            <p class="text-brand-muted text-sm leading-relaxed pb-5">Unlike traditional automation tools that require building visual workflows, Dabox uses AI to understand natural language. Just type what you want done — no drag-and-drop, no complex configurations. Plus, Dabox learns from your behavior and improves over time with persistent memory.</p>
-          </div>
-        </div>
-
-        <!-- FAQ 7 -->
-        <div class="glass-card rounded-xl overflow-hidden">
-          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
-            <span class="font-semibold pr-4">What are tokens and how do they work?</span>
-            <span class="faq-icon text-brand-electric text-xl font-light flex-shrink-0">+</span>
-          </button>
-          <div class="faq-content px-5">
-            <p class="text-brand-muted text-sm leading-relaxed pb-5">Tokens measure the AI processing used for your tasks. Simple tasks like "block my calendar" use fewer tokens, while complex tasks like "analyze all my emails and create a weekly report" use more. Your monthly token budget resets at the start of each billing cycle.</p>
-          </div>
-        </div>
-
-        <!-- FAQ 8 -->
-        <div class="glass-card rounded-xl overflow-hidden">
-          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
-            <span class="font-semibold pr-4">Do you offer an API?</span>
-            <span class="faq-icon text-brand-electric text-xl font-light flex-shrink-0">+</span>
-          </button>
-          <div class="faq-content px-5">
-            <p class="text-brand-muted text-sm leading-relaxed pb-5">Yes, API access is available on the Business plan ($99/month). It allows you to integrate Dabox's AI automation capabilities directly into your own applications and workflows programmatically.</p>
-          </div>
+          <h3 class="text-xl font-bold mb-3">Lanzamiento</h3>
+          <p class="text-brand-muted leading-relaxed">Deploy a produccion, QA exhaustivo, soporte post-lanzamiento y mantenimiento.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FINAL CTA ===== -->
+  <!-- ===== CTA ===== -->
   <section class="py-24 lg:py-32 relative overflow-hidden">
     <div class="absolute inset-0 hero-gradient pointer-events-none"></div>
     <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
@@ -1738,93 +552,72 @@
     </div>
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative reveal">
       <h2 class="text-3xl sm:text-4xl lg:text-6xl font-black mb-6">
-        Ready to <span class="gradient-text">automate</span> your work?
+        Tienes una idea?<br><span class="gradient-text">Hagamosla realidad</span>
       </h2>
       <p class="text-brand-muted text-lg sm:text-xl max-w-2xl mx-auto mb-10">
-        Join 2,100+ professionals saving hours every week with AI-powered automation. Start free — no credit card required.
+        Cuentanos sobre tu proyecto y te ayudamos a definir el mejor camino para llevarlo a produccion.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#" class="btn-shine w-full sm:w-auto px-10 py-4 rounded-full bg-gradient-to-r from-brand-electric to-cyan-400 text-brand-deep font-bold text-lg hover:shadow-2xl hover:shadow-brand-electric/25 transition-all hover:scale-105">
-          Start for free
+        <a href="#contacto" class="btn-shine w-full sm:w-auto px-10 py-4 rounded-full bg-gradient-to-r from-brand-electric to-cyan-400 text-brand-deep font-bold text-lg hover:shadow-2xl hover:shadow-brand-electric/25 transition-all hover:scale-105">
+          Iniciar proyecto
         </a>
-        <a href="#pricing" class="w-full sm:w-auto px-10 py-4 rounded-full border border-white/10 hover:border-white/20 font-semibold text-lg transition-all hover:bg-white/5">
-          See plans
+        <a href="#portafolio" class="w-full sm:w-auto px-10 py-4 rounded-full border border-white/10 hover:border-white/20 font-semibold text-lg transition-all hover:bg-white/5">
+          Ver portafolio
         </a>
       </div>
     </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
-  <footer id="contact" class="border-t border-brand-border py-16 lg:py-20">
+  <footer id="contacto" class="border-t border-brand-border py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
         <!-- Brand -->
-        <div class="col-span-2 md:col-span-4 lg:col-span-1 mb-4 lg:mb-0">
+        <div>
           <a href="#" class="flex items-center gap-2 mb-4">
-            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-electric to-brand-accent flex items-center justify-center">
-              <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #2d8a4e 0%, #34c7a0 40%, #7dd3a8 70%, #c4b84e 100%);">
+              <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
             </div>
-            <span class="text-xl font-bold">Dabox</span>
+            <span class="text-xl font-bold">Intech</span>
           </a>
-          <p class="text-brand-muted text-sm leading-relaxed mb-6 max-w-xs">AI-powered automation that connects your apps and executes tasks in plain language.</p>
-          <!-- Newsletter -->
-          <div class="flex gap-2">
-            <input type="email" placeholder="Your email" class="flex-1 px-4 py-2.5 rounded-lg bg-white/5 border border-brand-border text-sm placeholder:text-brand-muted focus:outline-none focus:border-brand-electric/50 transition-colors" aria-label="Email for newsletter">
-            <button class="px-4 py-2.5 rounded-lg bg-brand-electric text-brand-deep font-semibold text-sm hover:bg-brand-electric/90 transition-colors">Subscribe</button>
-          </div>
+          <p class="text-brand-muted text-sm leading-relaxed max-w-xs">Desarrollo de software a medida, fintech, IA y soluciones blockchain. Del concepto a produccion.</p>
         </div>
 
-        <!-- Product -->
+        <!-- Navegacion -->
         <div>
-          <h4 class="font-semibold text-sm mb-4">Product</h4>
+          <h4 class="font-semibold text-sm mb-4">Navegacion</h4>
           <ul class="space-y-2.5">
-            <li><a href="#services" class="text-sm text-brand-muted hover:text-white transition-colors">Features</a></li>
-            <li><a href="#integrations" class="text-sm text-brand-muted hover:text-white transition-colors">Integrations</a></li>
-            <li><a href="#pricing" class="text-sm text-brand-muted hover:text-white transition-colors">Pricing</a></li>
-            <li><a href="#" class="text-sm text-brand-muted hover:text-white transition-colors">Changelog</a></li>
-            <li><a href="#" class="text-sm text-brand-muted hover:text-white transition-colors">API Docs</a></li>
+            <li><a href="#inicio" class="text-sm text-brand-muted hover:text-white transition-colors">Inicio</a></li>
+            <li><a href="#servicios" class="text-sm text-brand-muted hover:text-white transition-colors">Servicios</a></li>
+            <li><a href="#portafolio" class="text-sm text-brand-muted hover:text-white transition-colors">Portafolio</a></li>
+            <li><a href="#proceso" class="text-sm text-brand-muted hover:text-white transition-colors">Proceso</a></li>
           </ul>
         </div>
 
-        <!-- Company -->
+        <!-- Contacto -->
         <div>
-          <h4 class="font-semibold text-sm mb-4">Company</h4>
+          <h4 class="font-semibold text-sm mb-4">Contacto</h4>
           <ul class="space-y-2.5">
-            <li><a href="#about" class="text-sm text-brand-muted hover:text-white transition-colors">About</a></li>
-            <li><a href="#" class="text-sm text-brand-muted hover:text-white transition-colors">Blog</a></li>
-            <li><a href="#" class="text-sm text-brand-muted hover:text-white transition-colors">Careers</a></li>
-            <li><a href="#contact" class="text-sm text-brand-muted hover:text-white transition-colors">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Legal -->
-        <div>
-          <h4 class="font-semibold text-sm mb-4">Legal</h4>
-          <ul class="space-y-2.5">
-            <li><a href="#" class="text-sm text-brand-muted hover:text-white transition-colors">Privacy Policy</a></li>
-            <li><a href="#" class="text-sm text-brand-muted hover:text-white transition-colors">Terms of Service</a></li>
-            <li><a href="#" class="text-sm text-brand-muted hover:text-white transition-colors">Cookie Policy</a></li>
-            <li><a href="#" class="text-sm text-brand-muted hover:text-white transition-colors">Security</a></li>
+            <li class="flex items-center gap-2 text-sm text-brand-muted">
+              <svg class="w-4 h-4 text-brand-electric flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+              contacto@intech.dev
+            </li>
+            <li class="flex items-center gap-2 text-sm text-brand-muted">
+              <svg class="w-4 h-4 text-brand-electric flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+              Colombia
+            </li>
           </ul>
         </div>
       </div>
 
-      <!-- Bottom bar -->
       <div class="pt-8 border-t border-brand-border flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-sm text-brand-muted">&copy; 2026 Dabox Hub. All rights reserved.</p>
-        <!-- Social -->
+        <p class="text-sm text-brand-muted">&copy; 2026 Intech. Todos los derechos reservados.</p>
         <div class="flex items-center gap-4">
-          <a href="#" class="text-brand-muted hover:text-white transition-colors" aria-label="Twitter">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
           <a href="#" class="text-brand-muted hover:text-white transition-colors" aria-label="LinkedIn">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           </a>
           <a href="#" class="text-brand-muted hover:text-white transition-colors" aria-label="GitHub">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          </a>
-          <a href="#" class="text-brand-muted hover:text-white transition-colors" aria-label="Discord">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
           </a>
         </div>
       </div>
@@ -1833,99 +626,10 @@
 
   <!-- ===== SCRIPTS ===== -->
   <script>
-    // --- Integration logos data ---
-    const row1Apps = [
-      { name: 'Gmail', abbr: 'G', color: '#EA4335' },
-      { name: 'Slack', abbr: 'S', color: '#4A154B' },
-      { name: 'Notion', abbr: 'N', color: '#787878' },
-      { name: 'Google Calendar', abbr: 'GC', color: '#4285F4' },
-      { name: 'GitHub', abbr: 'GH', color: '#6e7681' },
-      { name: 'Google Drive', abbr: 'GD', color: '#0F9D58' },
-      { name: 'Shopify', abbr: 'Sh', color: '#96BF48' },
-      { name: 'Trello', abbr: 'Tr', color: '#0079BF' },
-      { name: 'Discord', abbr: 'Dc', color: '#5865F2' },
-      { name: 'Stripe', abbr: 'St', color: '#635BFF' },
-      { name: 'Jira', abbr: 'Ji', color: '#0052CC' },
-      { name: 'Linear', abbr: 'Li', color: '#5E6AD2' },
-    ];
-
-    const row2Apps = [
-      { name: 'Figma', abbr: 'Fi', color: '#F24E1E' },
-      { name: 'Asana', abbr: 'As', color: '#F06A6A' },
-      { name: 'HubSpot', abbr: 'Hs', color: '#FF7A59' },
-      { name: 'Salesforce', abbr: 'Sf', color: '#00A1E0' },
-      { name: 'Telegram', abbr: 'Tg', color: '#0088CC' },
-      { name: 'Dropbox', abbr: 'Db', color: '#0061FF' },
-      { name: 'Airtable', abbr: 'At', color: '#18BFFF' },
-      { name: 'Google Sheets', abbr: 'GS', color: '#0F9D58' },
-      { name: 'Intercom', abbr: 'Ic', color: '#1F8DED' },
-      { name: 'Zendesk', abbr: 'Zd', color: '#03363D' },
-      { name: 'Mailchimp', abbr: 'Mc', color: '#FFE01B' },
-      { name: 'Sentry', abbr: 'Se', color: '#362D59' },
-      { name: 'Vercel', abbr: 'Vc', color: '#888' },
-      { name: 'PayPal', abbr: 'Pp', color: '#003087' },
-    ];
-
-    function createAppBadge(app) {
-      return `<div class="flex items-center gap-3 px-5 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-brand-electric/20 transition-colors flex-shrink-0 min-w-max">
-        <div class="w-7 h-7 rounded-md flex items-center justify-center text-xs font-bold" style="background:${app.color}20;color:${app.color}">${app.abbr}</div>
-        <span class="text-sm font-medium text-brand-muted">${app.name}</span>
-      </div>`;
-    }
-
-    function populateCarousel(containerId, dupId, apps) {
-      const html = apps.map(createAppBadge).join('');
-      document.getElementById(containerId).innerHTML = html;
-      document.getElementById(dupId).innerHTML = html;
-    }
-
-    populateCarousel('carousel1', 'carousel1-dup', row1Apps);
-    populateCarousel('carousel2', 'carousel2-dup', row2Apps);
-
-    // --- Theme Toggle ---
-    const html = document.documentElement;
-    const body = document.body;
-    const moonIcon = document.getElementById('moonIcon');
-    const sunIcon = document.getElementById('sunIcon');
-
-    function setTheme(isDark) {
-      if (isDark) {
-        html.classList.add('dark');
-        html.classList.remove('light');
-        body.classList.add('bg-brand-surface', 'text-white');
-        body.classList.remove('bg-white', 'text-gray-900');
-        moonIcon.classList.remove('hidden');
-        sunIcon.classList.add('hidden');
-      } else {
-        html.classList.remove('dark');
-        html.classList.add('light');
-        body.classList.remove('bg-brand-surface', 'text-white');
-        body.classList.add('bg-white', 'text-gray-900');
-        moonIcon.classList.add('hidden');
-        sunIcon.classList.remove('hidden');
-      }
-      localStorage.setItem('dabox-theme', isDark ? 'dark' : 'light');
-    }
-
-    document.getElementById('themeToggle').addEventListener('click', () => {
-      setTheme(!html.classList.contains('dark'));
-    });
-    document.getElementById('mobileThemeToggle').addEventListener('click', () => {
-      setTheme(!html.classList.contains('dark'));
-    });
-
-    // Restore theme
-    const saved = localStorage.getItem('dabox-theme');
-    if (saved === 'light') setTheme(false);
-
     // --- Navbar scroll ---
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('navbar-solid');
-      } else {
-        navbar.classList.remove('navbar-solid');
-      }
+      navbar.classList.toggle('navbar-solid', window.scrollY > 50);
     }, { passive: true });
 
     // --- Mobile menu ---
@@ -1936,35 +640,12 @@
       link.addEventListener('click', () => mobileMenu.classList.remove('open'));
     });
 
-    // --- FAQ accordion ---
-    document.querySelectorAll('.faq-toggle').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const content = btn.nextElementSibling;
-        const icon = btn.querySelector('.faq-icon');
-        const isOpen = content.classList.contains('open');
-
-        // Close all
-        document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('open'));
-        document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('open'));
-        document.querySelectorAll('.faq-toggle').forEach(b => b.setAttribute('aria-expanded', 'false'));
-
-        if (!isOpen) {
-          content.classList.add('open');
-          icon.classList.add('open');
-          btn.setAttribute('aria-expanded', 'true');
-        }
-      });
-    });
-
     // --- Scroll reveal ---
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('active');
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
     // --- Portfolio card click ---
@@ -1972,7 +653,7 @@
       const href = card.dataset.href;
       if (href) {
         card.addEventListener('click', (e) => {
-          if (e.target.closest('a')) return; // let inner links work normally
+          if (e.target.closest('a')) return;
           window.open(href, '_blank', 'noopener,noreferrer');
         });
       } else {
@@ -2008,7 +689,78 @@
       });
     });
 
-    // --- Smooth scroll for anchor links ---
+    // --- Portfolio cards (dynamic with screenshots) ---
+    const projects = [
+      { name: 'NIIO', year: '2025', desc: 'Ecosistema fintech para pagos y comercios — KYC, tarjetas, dashboard.', category: 'fintech', catLabel: 'Fintech', catColor: 'brand-electric', href: 'https://niiopay.com/', gradient: 'from-brand-electric to-cyan-400' },
+      { name: 'Loan Pro', year: '2024', desc: 'Originacion de prestamos digitales — scoring, verificacion, gestion de cartera.', category: 'fintech', catLabel: 'Fintech', catColor: 'brand-electric', href: 'https://app.loanpro.com.co/auth/sign-in', gradient: 'from-brand-success to-emerald-400' },
+      { name: 'Alivio Wallet', year: '2025', desc: 'Billetera digital y pagos — desembolsos, multi-moneda/crypto, seguridad.', category: 'fintech', catLabel: 'Fintech', catColor: 'brand-electric', href: 'https://aliviofinance.com/', gradient: 'from-brand-success to-emerald-400' },
+      { name: 'Unique Fintech Suite', year: '2025', desc: 'Ecosistema completo: Unique Payment + Unique APP Trading + Unique Fintech.', category: 'fintech', catLabel: 'Fintech', catColor: 'brand-electric', href: 'https://www.somosuniquecapital.com/', gradient: 'from-brand-electric to-cyan-400' },
+      { name: 'Unique Payment', year: '2025', desc: 'Plataforma de pagos digitales para el ecosistema Unique Capital.', category: 'fintech', catLabel: 'Fintech', catColor: 'brand-electric', href: 'https://www.somosuniquecapital.com/', gradient: 'from-brand-success to-emerald-400' },
+      { name: 'Unique APP Trading', year: '2025', desc: 'Aplicacion de trading para el ecosistema financiero Unique Capital.', category: 'fintech', catLabel: 'Fintech', catColor: 'brand-electric', href: null, gradient: 'from-brand-electric to-cyan-400' },
+      { name: 'Pay2Neo', year: '2026', desc: 'Plataforma de procesamiento de pagos de nueva generacion.', category: 'fintech', catLabel: 'Fintech', catColor: 'brand-electric', href: null, gradient: 'from-brand-electric to-cyan-400' },
+      { name: 'FinTrax', year: '2026', desc: 'Plataforma de seguimiento y analitica financiera.', category: 'fintech', catLabel: 'Fintech', catColor: 'brand-electric', href: 'https://app-fintrax-production.up.railway.app/', gradient: 'from-brand-electric to-cyan-400' },
+      { name: 'Alerta Rosa', year: '2025', desc: 'Plataforma de seguridad y prevencion con proposito social.', category: 'software', catLabel: 'Software', catColor: 'purple-400', href: 'https://www.alertarosa.co/', gradient: 'from-rose-500 to-pink-400' },
+      { name: 'TuCop', year: '2024', desc: 'Suite corporativa para optimizacion de procesos y productividad de equipos.', category: 'software', catLabel: 'Software', catColor: 'purple-400', href: 'https://tucop.xyz/', gradient: 'from-brand-success to-emerald-400' },
+      { name: 'Innertraders', year: '2025', desc: 'Journaling y analitica para traders — importacion, metricas, reportes.', category: 'software', catLabel: 'Software', catColor: 'purple-400', href: 'https://appinnertraders-production.up.railway.app/dashboard/home', gradient: 'from-brand-accent to-amber-400' },
+      { name: 'Audiovisual Ciudadano', year: '2025', desc: 'Plataforma de produccion y distribucion audiovisual comunitaria.', category: 'software', catLabel: 'Software', catColor: 'purple-400', href: 'https://contacto.camara.gov.co/', gradient: 'from-brand-success to-emerald-400' },
+      { name: 'Click4Pets', year: '2025', desc: 'Plataforma de comunidad para mascotas con contenido y marketplace.', category: 'software', catLabel: 'Software', catColor: 'purple-400', href: 'https://click4pet.org/', gradient: 'from-brand-success to-emerald-400' },
+      { name: 'DCZonance', year: '2026', desc: 'Plataforma de resonancia digital — solucion de software personalizada.', category: 'software', catLabel: 'Software', catColor: 'purple-400', href: 'https://www.dczonance.online/', gradient: 'from-brand-success to-emerald-400' },
+      { name: 'LordGolden', year: '2026', desc: 'Proyecto premium de software personalizado — en fase de alcance.', category: 'software', catLabel: 'Software', catColor: 'purple-400', href: null, gradient: 'from-brand-accent to-amber-400' },
+      { name: 'UrbanPass', year: '2026', desc: 'Plataforma de acceso urbano y gestion de pases.', category: 'software', catLabel: 'Software', catColor: 'purple-400', href: null, gradient: 'from-brand-electric to-cyan-400' },
+      { name: 'MiFlowPro', year: '2026', desc: 'Plataforma de gestion de flujos de trabajo y procesos.', category: 'software', catLabel: 'Software', catColor: 'purple-400', href: null, gradient: 'from-brand-electric to-cyan-400' },
+      { name: 'DaboxLab', year: '2026', desc: 'Laboratorio de innovacion Dabox — desarrollo experimental de productos.', category: 'software', catLabel: 'Software', catColor: 'purple-400', href: 'https://www.daboxhub.com/es', gradient: 'from-brand-electric to-cyan-400' },
+      { name: 'Goldbell', year: '2026', desc: 'Solucion de software personalizado — en desarrollo.', category: 'software', catLabel: 'Software', catColor: 'purple-400', href: null, gradient: 'from-brand-electric to-cyan-400' },
+      { name: 'Streaming', year: '2026', desc: 'Plataforma de streaming personalizada.', category: 'software', catLabel: 'Software', catColor: 'purple-400', href: null, gradient: 'from-brand-electric to-cyan-400' },
+      { name: 'Premium Academy DG', year: '2025', desc: 'Academia de educacion financiera — cursos, comunidad, certificaciones.', category: 'educacion', catLabel: 'Educacion', catColor: 'brand-accent', href: 'https://www.premiumacademy.pro/home', gradient: 'from-brand-success to-emerald-400' },
+      { name: 'DeepAcademy', year: '2025', desc: 'Plataforma e-learning multiproposito — SSO, suscripciones, analitica.', category: 'educacion', catLabel: 'Educacion', catColor: 'brand-accent', href: 'https://signals.deepcapitals.com/', gradient: 'from-brand-success to-emerald-400' },
+      { name: 'Premium Academy App', year: '2026', desc: 'App movil companera de la plataforma Premium Academy DG.', category: 'educacion', catLabel: 'Educacion', catColor: 'brand-accent', href: 'https://www.premiumacademy.pro/home', gradient: 'from-brand-electric to-cyan-400' },
+      { name: 'News & Journal Premium', year: '2026', desc: 'Plataforma de noticias y revista para el ecosistema Premium Academy.', category: 'educacion', catLabel: 'Educacion', catColor: 'brand-accent', href: 'https://www.premiumacademy.pro/home', gradient: 'from-brand-electric to-cyan-400' },
+      { name: 'DeepSignals', year: '2025', desc: 'Inteligencia de mercado en tiempo real — senales, analisis, dashboards.', category: 'ia', catLabel: 'IA', catColor: 'violet-400', href: 'https://signals.deepcapitals.com/', gradient: 'from-violet-500 to-purple-400' },
+      { name: 'TokenByU', year: '2026', desc: 'Plataforma de tokenizacion blockchain — activos digitales y gestion de tokens.', category: 'blockchain', catLabel: 'Blockchain', catColor: 'orange-400', href: 'https://tokenbyu.com/', gradient: 'from-orange-500 to-amber-400' },
+      { name: 'Astralem', year: '2025', desc: 'Diseno UI/UX y experiencia para productos digitales — design systems.', category: 'diseno', catLabel: 'Diseno/UX', catColor: 'pink-400', href: 'https://www.figma.com/proto/Se92VB0ZBmiuhn7uqaIRPd/Astralem----Design-system', gradient: 'from-pink-500 to-rose-400' },
+    ];
+
+    function getScreenshotUrl(url) {
+      return 'https://image.thum.io/get/width/640/crop/400/noanimate/' + url;
+    }
+
+    function createCard(p) {
+      const hasLink = !!p.href;
+      const isFigma = p.href && p.href.includes('figma.com');
+      const screenshotUrl = hasLink && !isFigma ? getScreenshotUrl(p.href) : null;
+
+      const imageHtml = screenshotUrl
+        ? '<div class="img-loading"></div><img src="' + screenshotUrl + '" alt="' + p.name + '" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.onerror=null;this.parentElement.innerHTML=\'<div class=placeholder-img>' + p.name + '</div>\'">'
+        : '<div class="placeholder-img">' + p.name + '</div>';
+
+      const overlayBtn = hasLink
+        ? '<div class="card-overlay"><a href="' + p.href + '" target="_blank" rel="noopener noreferrer" class="overlay-btn" onclick="event.stopPropagation()">' + (isFigma ? 'Ver prototipo' : 'Visitar plataforma') + ' <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg></a></div>'
+        : '';
+
+      const linkHtml = hasLink
+        ? '<a href="' + p.href + '" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-muted hover:text-brand-electric transition-colors flex items-center gap-1 group/link" onclick="event.stopPropagation()">Ver sitio <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>'
+        : '';
+
+      return '<div class="portfolio-card glass-card" data-category="' + p.category + '"' + (hasLink ? ' data-href="' + p.href + '"' : '') + '>' +
+        '<div class="card-img">' + imageHtml + overlayBtn + '</div>' +
+        '<div class="h-1 bg-gradient-to-r ' + p.gradient + '"></div>' +
+        '<div class="p-5">' +
+          '<div class="flex items-start justify-between mb-3">' +
+            '<div><h3 class="font-bold text-base">' + p.name + '</h3><span class="text-xs text-brand-muted">' + p.year + '</span></div>' +
+            
+          '</div>' +
+          '<p class="text-brand-muted text-sm leading-relaxed mb-3">' + p.desc + '</p>' +
+          '<div class="flex items-center justify-between">' +
+            '<span class="text-xs font-medium text-' + p.catColor + ' bg-' + p.catColor + '/10 px-2.5 py-1 rounded-full">' + p.catLabel + '</span>' +
+            linkHtml +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    }
+
+    document.getElementById('portfolioGrid').innerHTML = projects.map(createCard).join('');
+
+    // --- Smooth scroll ---
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', (e) => {
         const id = a.getAttribute('href');
